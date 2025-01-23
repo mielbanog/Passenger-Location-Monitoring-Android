@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.Driverdetails">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/QrImagevw"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_marginVertical="20dp"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbldriver"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:text="Driver Name :"
+                android:layout_marginVertical="10dp"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/lblplate"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbldriver"
+                android:layout_marginVertical="10dp"
+                android:text="Plate number :"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lblbody"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblplate"
+                android:layout_marginVertical="10dp"
+                android:text="Body number:"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:id="@+id/lblcontact"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblbody"
+                android:layout_marginVertical="10dp"
+                android:text="Contact number:"
+                android:textSize="16sp"
+                />
+
+
+            <TextView
+                android:id="@+id/lbloperator"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblplate"
+                android:layout_marginVertical="10dp"
+                android:text="Operator :"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/lbladdress"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblplate"
+                android:layout_marginVertical="10dp"
+                android:text="Address :"
+                android:textSize="16sp" />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:paddingVertical="20dp"
+            android:layout_marginVertical="20dp"
+            >
+
+            <TextView
+                android:id="@+id/disDrivername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver Name"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/lbldriver"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                />
+            <TextView
+                android:id="@+id/disPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plate number"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/lblplate"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/lbldriver"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/dispBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblplate"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/lblbody"
+                android:textColor="@color/black"
+                android:layout_marginVertical="5dp"
+                android:text="Body number"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/dispContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblplate"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/lblbody"
+                android:textColor="@color/black"
+                android:layout_marginVertical="10dp"
+                android:text="contact number"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/dispOperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblplate"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/lblbody"
+                android:text="operator"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dispAddr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblplate"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/lblbody"
+                android:textColor="@color/black"
+                android:layout_marginVertical="6dp"
+                android:text="address"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dispBody"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/saveqrBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dispBody"
+            android:text="Save QRcode"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>

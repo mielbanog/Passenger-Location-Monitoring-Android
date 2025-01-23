@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img"
+        android:layout_marginStart="5dp"
+        android:padding="5dp"
+        android:text="Driver name:"/>
+
+    <TextView
+        android:id="@+id/plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plate:"
+        android:layout_marginStart="5dp"
+        android:padding="5dp"
+        android:layout_toEndOf="@+id/img"
+        android:layout_below="@+id/name"
+        />
+    <TextView
+        android:id="@+id/bodynumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img"
+        android:layout_marginStart="5dp"
+        android:text="Body #:"
+        android:padding="5dp"
+        android:layout_below="@+id/plate"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img"
+        android:src="@drawable/baseline_person_24"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

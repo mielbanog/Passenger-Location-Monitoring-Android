@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bgcorner"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enable GPS"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:text="To continue, turn on device location, which uses Google's location service "
+            />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="end"
+    android:padding="10dp"
+    >
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg_default"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="5dp"
+        android:text="Cancel"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/blue3" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:padding="5dp"
+        android:textColor="@color/blue3"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:elevation="0dp"
+        android:background="@drawable/button_bg_default"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        />
+</LinearLayout>
+
+</LinearLayout>

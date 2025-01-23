@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.HomePageActivity">
+
+    <ImageView
+        android:id="@+id/qrDisp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/qrcodeViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/qrCodeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:background="@drawable/rectangle_text_background"
+           />
+        <Button
+            android:id="@+id/copyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="Copy"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_below="@id/backButton"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:layout_marginBottom="50dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ScanBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/backButton"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:text="Scan QR Code"
+            android:padding="10dp"
+            android:textColor="#FBF4F4"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/GenerateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/backButton"
+            android:padding="10dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:text="Generate"
+            android:textColor="#FBF4F4"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/backButton"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:padding="10dp"
+            android:text="Logout"
+            android:textColor="#FBF4F4"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</LinearLayout>

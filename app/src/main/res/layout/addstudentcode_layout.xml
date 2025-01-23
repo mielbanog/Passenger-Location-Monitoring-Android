@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialogroundcorner">
+
+    <TextView
+        android:id="@+id/txtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:letterSpacing="0.02"
+        android:text="Enter Student Code"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        />
+    <LinearLayout
+        android:id="@+id/inlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtitle"
+        android:weightSum="3"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/input_txtlyt"
+            android:id="@+id/studentCodetxtlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            app:startIconDrawable="@drawable/baseline_person_24"
+            android:hint="Enter code">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/studentCodetxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inlayout1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/inlayout1"
+            android:layout_marginStart="70dp"
+            android:background="@color/white"
+            android:backgroundTintMode="src_over"
+            android:elevation="0dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addstdBtn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/inlayout1"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/cancelBtn"
+            android:background="@drawable/btnborder"
+            android:backgroundTintMode="src_over"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

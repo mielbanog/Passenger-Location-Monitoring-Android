@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.DisplayLocation">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomButtonsLayout"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/loc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/loc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/white">
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/map"
+                    tools:context=".ui.DisplayLocation"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="20dp"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/refBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Start"
+                    />
+                <Button
+                    android:id="@+id/refreshBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Refresh"
+                    />
+                <Button
+                    android:id="@+id/stopBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stop"
+                    android:visibility="gone"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:visibility="visible"
+                    />
+                <TextView
+                    android:id="@+id/arrivedlbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    android:text="Arrived"/>
+
+
+
+            </LinearLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/driverdetailslayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="20dp"
+                android:elevation="5dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    >
+                    <TextView
+                        android:id="@+id/lbl1"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:text="Driver name:"/>
+                    <TextView
+                        android:id="@+id/lbl2"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@id/lbl1"
+                        android:text="Plate number:"/>
+                    <TextView
+                        android:id="@+id/lbl3"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@id/lbl2"
+                        android:text="Body number:"/>
+                    <TextView
+                        android:id="@+id/lbl4"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@id/lbl3"
+                        android:text="Contact:"/>
+                    <TextView
+                        android:id="@+id/lbl5"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@id/lbl4"
+                        android:text="Operator :"/>
+                    <TextView
+                        android:id="@+id/lbl6"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@id/lbl5"
+                        android:text="Address :"/>
+                    <TextView
+                        android:id="@+id/driverDispname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/lbl1"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="9dp"
+                        android:textColor="@color/bluetru"
+                        android:textSize="16sp"
+                        android:text="Full name"/>
+                    <TextView
+                        android:id="@+id/plateDisp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_below="@id/driverDispname"
+                        android:layout_toEndOf="@+id/lbl2"
+                        android:textColor="@color/bluetru"
+                        android:textSize="16sp"
+                        android:text=""/>
+                    <TextView
+                        android:id="@+id/bodyDisp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@+id/plateDisp"
+                        android:textColor="@color/bluetru"
+                        android:textSize="16sp"
+                        android:layout_toEndOf="@+id/lbl3"/>
+                    <TextView
+                        android:id="@+id/contactDisp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@+id/bodyDisp"
+                        android:textColor="@color/bluetru"
+                        android:textSize="16sp"
+                        android:layout_toEndOf="@+id/lbl3"/>
+                    <TextView
+                        android:id="@+id/operatorDisp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="8dp"
+                        android:layout_below="@+id/contactDisp"
+                        android:textColor="@color/bluetru"
+                        android:textSize="16sp"
+                        android:layout_toEndOf="@+id/lbl3"/>
+                    <TextView
+                        android:id="@+id/addressDisp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@+id/operatorDisp"
+                        android:textColor="@color/bluetru"
+                        android:textSize="16sp"
+                        android:maxLines="5"
+                        android:layout_toEndOf="@+id/lbl3"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/bottomButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="5dp"
+        android:elevation="10dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <!-- Button 1 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelLocBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/cancelbtn_bg"
+            android:layout_marginHorizontal="5dp"
+            android:text="Cancel"
+            android:textColor="@color/blue"/>
+
+        <!-- Button 2 -->
+        <Button
+            android:id="@+id/arrivedLocBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_toEndOf="@id/cancelLocBtn"
+            android:layout_weight="1"
+            android:background="@drawable/arrivebtn_bg"
+            android:text="Arrived" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recCardvw"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/Image_Holder"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/drivericon"/>
+
+            <TextView
+                android:id="@+id/Driver_name"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/Image_Holder"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="left|center"
+                android:paddingLeft="7dp"
+                android:text="Full name"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/PlateDr"
+                android:layout_width="300dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/Driver_name"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@+id/Image_Holder"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="left|center"
+                android:paddingLeft="7dp"
+                android:text="Plate"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/qrCode"
+                android:layout_width="300dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/BodyNo"
+                android:layout_marginTop="-3dp"
+                android:layout_toRightOf="@+id/Image_Holder"
+                android:gravity="left|center"
+                android:paddingLeft="7dp"
+                android:text="April 06"
+                android:textSize="12dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/BodyNo"
+                android:layout_width="300dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/PlateDr"
+                android:layout_marginTop="-3dp"
+                android:layout_toRightOf="@+id/Image_Holder"
+
+                android:gravity="left|center"
+                android:paddingLeft="7dp"
+                android:text="April 06"
+                android:textSize="12dp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Detail_Button_Holder"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/Detail_Button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rvmenu"
+                android:background="@color/white"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

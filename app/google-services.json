@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "155739067547",
+    "firebase_url": "https://projectdb-8df4b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "projectdb-8df4b",
+    "storage_bucket": "projectdb-8df4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155739067547:android:d7099520a4f5211d9f223e",
+        "android_client_info": {
+          "package_name": "com.example.locationmonitoring"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0mBL9Xq1JCjMdc9_SYCTxTImgjmEBEro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

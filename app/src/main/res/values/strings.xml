@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LocationMonitoring</string>
+
+    <string name="signinlayout">Don\'t have an account? Sign Up</string>
+
+
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="lblforgotPass">Enter the email associated with your account and we`ll send an email instruction to reset your password.</string>
+    <string name="lblemailsent">An instruction has been sent to your email.</string>
+    <string name="arrivedTextbtn">Homepage</string>
+
+</resources>

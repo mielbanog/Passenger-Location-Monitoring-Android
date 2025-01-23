@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adminpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.adminpage">
+
+    <TextView
+        android:id="@+id/titletxtadm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:visibility="gone"
+        android:layout_marginBottom="100dp"
+        android:textSize="24sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F8F9F9"
+            android:layout_below="@+id/titletxtadm"
+            />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/FloatngActionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:fab_addButtonColorNormal="@color/blue"
+        app:fab_addButtonColorPressed="@color/bluelight"
+        app:fab_addButtonPlusIconColor="@color/white"
+        app:fab_expandDirection="up"
+        app:fab_labelStyle="@style/LabelStyle"
+        app:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/AddDriverbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/bluelight"
+            app:fab_icon="@drawable/add_icon"
+            app:fab_size="normal"
+            app:fab_title="Add a Driver" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/driversBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/bluelight"
+            app:fab_icon="@drawable/baseline_person_24"
+            app:fab_title="Drivers" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/LogoutfBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/bluelight"
+            app:fab_icon="@drawable/logoutic"
+            app:fab_title="Log out"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>
